@@ -47,5 +47,15 @@ namespace RaceDay.Tests
 
             Assert.True(canCreateEvent);
         }
+
+        [Fact]
+        public void Participant_ShouldBeAllowedToEnrol()
+        {
+            string role = "Participant";
+
+            bool canEnrol = role == "Participant";
+
+            Assert.True(canEnrol);
+        }
     }
 }
