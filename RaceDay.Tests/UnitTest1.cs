@@ -5,17 +5,27 @@ namespace RaceDay.Tests
         [Fact]
         public void Login_WithCorrectCredentials_ShouldPass()
         {
-            // Arrange
             string email = "akhona@test.com";
             string password = "Password123";
 
-            // Act
             bool loginSuccessful =
                 email == "akhona@test.com" &&
                 password == "Password123";
 
-            // Assert
             Assert.True(loginSuccessful);
+        }
+
+        [Fact]
+        public void Login_WithIncorrectPassword_ShouldFail()
+        {
+            string email = "akhona@test.com";
+            string password = "WrongPassword";
+
+            bool loginSuccessful =
+                email == "akhona@test.com" &&
+                password == "Password123";
+
+            Assert.False(loginSuccessful);
         }
     }
 }
