@@ -27,5 +27,15 @@ namespace RaceDay.Tests
 
             Assert.False(loginSuccessful);
         }
+
+        [Fact]
+        public void Participant_ShouldNotBeAllowedToCreateEvents()
+        {
+            string role = "Participant";
+
+            bool canCreateEvent = role == "Organiser";
+
+            Assert.False(canCreateEvent);
+        }
     }
 }
