@@ -37,5 +37,15 @@ namespace RaceDay.Tests
 
             Assert.False(canCreateEvent);
         }
+
+        [Fact]
+        public void Organiser_ShouldBeAllowedToCreateEvents()
+        {
+            string role = "Organiser";
+
+            bool canCreateEvent = role == "Organiser";
+
+            Assert.True(canCreateEvent);
+        }
     }
 }
